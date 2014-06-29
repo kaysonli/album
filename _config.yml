@@ -1,8 +1,8 @@
-name: Photo gallery
+name: 手机摄影
 markdown: redcarpet
 pygments: true
 permalink: /:year/:month/:title/
-url: http://nadjetey.github.io/GridGallery/
+url: 
 author:
     name: Nii Adjetey Sowah
     twitter: #

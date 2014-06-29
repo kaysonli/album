@@ -13,10 +13,11 @@ layout: default
 		{% for post in site.posts %}
 		<li>
 			<figure>
-				<img src="{{ site.url }}/img/thumb/{{ post.photo }}" alt="img"/>
+				<img src="{{ post.photo }}" alt="img"/>
 				<figcaption>
 					<h3>{{ post.caption_header}}</h3>
 					<p>{{ post.caption }}</p>
+					<p>{{ post.content }}</p>
 				</figcaption>
 			</figure>
 		</li>
@@ -29,7 +30,12 @@ layout: default
 		{% for post in site.posts %}
 		<li>
 			<figure>
-				<img src="{{ site.url }}/img/large/{{ post.photo }}" alt="img"/>
+				{% if post.clickUrl %}
+					<a href="{{ post.clickUrl }}" target="_blank"><img src="{{ post.photo }}" alt="img"/></a>
+				{% else %}
+					<img src="{{ post.photo }}" alt="img"/>
+				{% endif %}
+				
 				<figcaption><h3>{{ post.caption_header}}</h3><p>{{ post.caption }}</p></figcaption>
 			</figure>
 		</li>
